@@ -39,10 +39,10 @@
     </form>
 </div>
 
-    @auth
+    <!-- @auth
         <a href="/user/logout">
              <div class="create-account">Logout</div>
         </a>
-    @endauth  
+    @endauth   -->
     
 @endsection

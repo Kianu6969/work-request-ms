@@ -28,6 +28,10 @@ class PageController extends Controller
 
     public function adminDashboard()
     {
+            $myArray = [
+                "foo" => "bar",
+                "bar" => "foo",
+                ];
         return view('admin');
     }
 

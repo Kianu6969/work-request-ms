@@ -1,0 +1,46 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600&family=Manrope:wght@300;400;600&display=swap');
+
+/*Filter converter for svg images*/
+/*https://codepen.io/sosuke/pen/Pjoqqp*/
+
+*{
+	font-family: 'Comfortaa';
+	margin: 0;
+}
+/* color schemes */
+:root{
+	--white: #eaeaea;
+	--black: #332f35; 
+	--shadow: #1f1c23;
+	--orange: #e3474a;
+	--gray: #665f6c;
+	--green: #3cab7d;
+
+	--fn-regular: 1rem;
+	--fn-small: 0.7rem;
+	--fn-large: 2rem;
+	--fn-medium: 1.5rem;
+
+	--img-color-black: invert(13%) sepia(3%) saturate(2701%) hue-rotate(236deg) brightness(90%) contrast(81%);
+	--img-color-white: invert(100%) sepia(6%) saturate(436%) hue-rotate(207deg) brightness(116%) contrast(84%);
+	--img-color-orange: invert(44%) sepia(68%) saturate(939%) hue-rotate(317deg) brightness(85%) contrast(112%);
+}
+
+/* scroll bar style ===============================*/
+::-webkit-scrollbar{
+	width: var(--fn-regular);
+	height: 0px;
+}
+::-webkit-scrollbar-thumb{
+	background: var(--gray);
+	border-radius: var(--fn-small);
+	border: 5px solid var(--black);
+}
+::-webkit-scrollbar-track{
+	background: var(--black);
+}
+
+::-webkit-scrollbar-thumb:hover{
+	background: var(--orange);
+}

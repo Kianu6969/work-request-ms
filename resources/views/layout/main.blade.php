@@ -1,15 +1,53 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title')</title>
-    <link rel="stylesheet" href={{ asset('assets/css/styles.css') }}>
-    <script src={{ asset('assets/js/test.js') }} defer></script>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>@yield('title')</title>
+
+    <!-- Setting Different css links -->
+    <!-- <link rel="stylesheet" type="text/css" href=""> -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/styles.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 </head>
 <body>
-    @yield('content')
-    
-</body>
+
+
+
+	<div class="container">
+                <!-- HEADER SECTION-->
+        <header class="content-header">
+            <div class="img-box">
+                <!-- <img id="logo" src=""></img> -->
+                <span class="material-icons logo-icon">apartment</span>
+            </div>
+
+            <section class="header-title">
+                WORK REQUEST SYSTEM
+            </section>
+            <section class="header-user">
+               User
+            </section>
+            
+            <i class="material-icons">logout</i>
+           
+            <!-- <a href="/user/logout">
+                 <div class="header-profile">Logout</div>
+            </a> -->
+            @auth
+             <a href="/user/logout" class="header-profile">Logout</a>
+        	@endauth 
+           
+        </header>
+
+        
+
+		@yield('content')
+	</div>
+
+    <script type="text/javascript" src="{{ asset('assets/js/adminDashboard.js') }}" defer></script>
+</body>	
 </html>
