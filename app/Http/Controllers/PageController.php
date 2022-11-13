@@ -22,17 +22,15 @@ class PageController extends Controller
 
     public function login()
     {
-        return view('login');
+
+        return view('login', ['page'=>'login']);
     }
 
 
     public function adminDashboard()
     {
-            $myArray = [
-                "foo" => "bar",
-                "bar" => "foo",
-                ];
-        return view('admin');
+
+        return view('admin', ['page'=>'admin']);
     }
 
     public function requestorDashboard()

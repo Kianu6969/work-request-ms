@@ -1,0 +1,306 @@
+@import 'globalCss.css';
+
+body{
+	background: var(--black);
+	color: var(--white);
+}
+
+/*.header-title{
+	text-align: center;
+	box-shadow: 1px 1px 3px 0px var(--shadow);
+	padding: var(--fn-regular);
+	font-size: var(--fn-medium);
+}*/
+
+.container{
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 1fr;
+	grid-template-rows: 0fr 1fr;
+	grid-gap: var(--fn-large);
+}
+
+.content-header{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: var(--fn-regular);
+	font-size: var(--fn-medium);
+	box-shadow: 1px 1px 3px 0px var(--shadow);
+}
+
+.content-header .header-title::after{
+	content: 'Digitalized Work Ordering System';
+	display: block;
+	font-style: italic;
+	font-size: var(--fn-regular);
+}
+
+.content-main{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: var(--white);
+	margin-left: 20%;
+	margin-right: 20%;
+	border-radius: 2% 2% 0 0;
+}
+.title{
+	font-size: var(--fn-large);
+	color: var(--black);
+	margin-top: 10rem;
+}
+
+.content-main .login-button{
+	display: flex;
+	flex-direction: row;
+	margin-top: 2rem;
+
+}
+.content-main .login-button section{
+	margin: var(--fn-large) var(--fn-large) var(--fn-large) var(--fn-large);
+}
+.content-main section button{
+	border: none;
+	padding: var(--fn-large);
+	cursor: pointer;
+	border-radius: var(--fn-large);
+	font-size: var(--fn-regular);
+	font-weight: bold;
+	background: var(--orange);
+	color: var(--white);
+	box-shadow: 1px 1px 3px 0px var(--shadow);
+}
+
+.content-main section button:active{
+	box-shadow: 0px 0px 0px 0px var(--shadow);
+	background: var(--gray);
+}
+
+
+/* ========MODAL POP-UP Requestor==========*/
+.modal-container-requestor{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0,0,0,0.5);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s, opacity 0.3s;
+}
+/* WHEN ACTIVATED */
+.modal-container-requestor-active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-container-requestor form{
+	position: relative;
+	background: var(--white);
+	padding: 2rem 5rem 2rem 5rem;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: var(--fn-small);
+	width: 20%;
+	border-radius: 1rem;
+}
+.modal-container-requestor form label{
+	color: var(--black);
+	font-size: var(--fn-medium);
+	text-align: center;
+}
+.modal-container-requestor form input{
+	font-size: var(--fn-regular);
+	padding: var(--fn-regular);
+	outline: none;
+	border: none;
+	border-radius: 1rem;
+}
+/* login modal button */
+.btn{
+	cursor: pointer;
+	background: var(--orange);
+	color: var(--white);
+	border: none;
+	border-radius: 1rem;
+	width: 50%;
+	margin-left: 25%;
+	box-shadow: 1px 1px 3px 0px var(--shadow);
+}
+.btn:active{
+	background: var(--gray);
+	box-shadow: 0px 0px 0px 0px var(--shadow);
+}
+/* close button */
+.modal-container-requestor a {
+	position: absolute;
+	text-decoration: none;
+	color: var(--black);
+	top: 2%;
+	left: 90%;
+	font-size: var(--fn-large);
+	cursor: pointer;
+}
+/* ======== END MODAL POP-UP Requestor ==========*/
+
+
+/*========= MODAL POP-UP Admin ===============*/
+.modal-container-admin{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0,0,0,0.5);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s, opacity 0.3s;
+}
+/* WHEN ACTIVATED */
+.modal-container-admin-active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-container-admin form{
+	position: relative;
+	background: var(--white);
+	padding: 2rem 5rem 2rem 5rem;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: var(--fn-small);
+	width: 20%;
+	border-radius: 1rem;
+}
+.modal-container-admin form label{
+	color: var(--black);
+	font-size: var(--fn-medium);
+	text-align: center;
+}
+.modal-container-admin form input{
+	font-size: var(--fn-regular);
+	padding: var(--fn-regular);
+	outline: none;
+	border: none;
+	border-radius: 1rem;
+}
+/* login modal button */
+.btn{
+	cursor: pointer;
+	background: var(--orange);
+	color: var(--white);
+	border: none;
+	border-radius: 1rem;
+	width: 50%;
+	margin-left: 25%;
+	box-shadow: 1px 1px 3px 0px var(--shadow);
+}
+.btn:active{
+	background: var(--gray);
+	box-shadow: 0px 0px 0px 0px var(--shadow);
+}
+/* close button */
+.modal-container-admin a {
+	position: absolute;
+	text-decoration: none;
+	color: var(--black);
+	top: 2%;
+	left: 90%;
+	font-size: var(--fn-large);
+	cursor: pointer;
+}
+
+/*========= END MODAL POP-UP Admin ===============*/
+
+
+/*========= MODAL POP-UP Wrok Staff ===============*/
+.modal-container-staff{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0,0,0,0.5);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s, opacity 0.3s;
+}
+/* WHEN ACTIVATED */
+.modal-container-staff-active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-container-staff form{
+	position: relative;
+	background: var(--white);
+	padding: 2rem 5rem 2rem 5rem;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: var(--fn-small);
+	width: 20%;
+	border-radius: 1rem;
+}
+.modal-container-staff form label{
+	color: var(--black);
+	font-size: var(--fn-medium);
+	text-align: center;
+}
+.modal-container-staff form input{
+	font-size: var(--fn-regular);
+	padding: var(--fn-regular);
+	outline: none;
+	border: none;
+	border-radius: 1rem;
+}
+/* login modal button */
+.btn{
+	cursor: pointer;
+	background: var(--orange);
+	color: var(--white);
+	border: none;
+	border-radius: 1rem;
+	width: 50%;
+	margin-left: 25%;
+	box-shadow: 1px 1px 3px 0px var(--shadow);
+}
+.btn:active{
+	background: var(--gray);
+	box-shadow: 0px 0px 0px 0px var(--shadow);
+}
+/* close button */
+.modal-container-staff a {
+	position: absolute;
+	text-decoration: none;
+	color: var(--black);
+	top: 2%;
+	left: 90%;
+	font-size: var(--fn-large);
+	cursor: pointer;
+}
+
+
+
+
+@media only screen and (max-width: 500px){
+	.content-main{
+		margin: 0;
+	}
+}
