@@ -43,7 +43,7 @@ Route::post('/user/login/admin',[AuthController::class,'adminLoginAuthentication
 Route::post('/user/login/requestor',[AuthController::class, 'requestorLoginAuthentication']);
 Route::post('/user/login/staff',[AuthController::class, 'staffLoginAuthentication']);
 
-Route::get('/admin/dashboard',[PageController::class,'adminDashboard'])->middleware('auth');
+Route::get('/admin/dashboard',[PageController::class,'adminDashboard']);//->middleware('auth');
 Route::get('/requestor/dashboard',[PageController::class,'requestorDashboard'])->middleware('auth');
 Route::get('/staff/dashboard',[PageController::class,'staffDashboard'])->middleware('auth');
 
